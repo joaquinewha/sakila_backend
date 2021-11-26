@@ -1,7 +1,6 @@
 {
   "name": "ProyectoSakilaSoftware",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,15 @@
     "msql": "^1.0.3",
     "myql": "^1.0.0",
     "mysql": "^2.18.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaquinewha/sakila_backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaquinewha/sakila_backend/issues"
+  },
+  "homepage": "https://github.com/joaquinewha/sakila_backend#readme",
+  "description": ""
 }
