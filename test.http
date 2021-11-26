@@ -1,0 +1,64 @@
+### Prueba de coneccion
+GET http://localhost:3000/
+
+### Todas las Tiendas
+GET http://localhost:3000/store
+
+
+### Buscar Film por palabra en title de Film
+GET http://localhost:3000/store/1/inventory/film?name_film=club
+### Buscar Film por nombre de Actor
+GET http://localhost:3000/store/1/inventory/film?name_actor=GUINESS
+### Todos los Film de una Tienda
+GET http://localhost:3000/store/1/inventory/film
+
+
+### Sacar Customer de una Store por Id
+GET http://localhost:3000/store/1/custumer/2
+
+### Editar una Customer de una Store por Id
+PUT http://localhost:3000/store/1/custumer/2
+Content-Type: application/json
+
+{
+    "address": "898 Lamnda Avenue"
+}
+
+
+/*INSERT INTO customer  (customer_id, store_id, first_name, last_name, address_id, active, create_date, last_update)
+VALUES ('600', '2', 'GEL', 'PEPE', '603', '0', '2021-09-25 22:32:31', '2021-09-25 22:32:43')*/
+### Crear un customer en un Store
+POST http://localhost:3000/store/1/customer
+Content-Type: application/json
+
+{
+    "customer_id":"600",
+    "first_name":"GEL",
+    "last_name":"PEPE",    
+    "active":"0",
+    "create_date":"2021-09-25 22:32:31",
+    "last_update":"2021-09-25 22:32:31"
+}
+
+//"address_id":"603",
+    /*
+    "address":"225 AV Lupoez",
+    "address2":""
+    "district":"QLSD"
+    "city_id":"300"
+    "postal_code":"1010"
+    "phone":"25648756"
+    "last_update":"2021-09-25 22:32:31"
+    "location":"POINT (153.1913094 -27.6333373)"*/
+
+
+### Crear un rental en un Store
+POST http://localhost:3000/store/1/customer/1/rental
+Content-Type: application/json
+
+{
+    "rental_date":"GEL",
+    "return_date":"PEPE",    
+    "staff_id":"0",
+    "last_update":"2021-09-25 22:32:31"
+}
