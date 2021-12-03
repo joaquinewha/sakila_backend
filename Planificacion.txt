@@ -1,156 +1,146 @@
 objetos
-- actor
-    - actor_id
-    - first_name
-    - last_name
-    - last_update
-- address 
-    - address_id
-    - address
-    - address2
-    - district
-    - city (object)
-    - postal_code
-    - phone
-    - last_update
-    - location
-- category
-    - category_id
-    - name
-    - last_update
-- city
-    - city_id
+    - actor
+        - actor_id
+        - first_name
+        - last_name
+        - last_update
+    - address 
+        - address_id
+        - address
+        - address2
+        - district
+        - city (object)
+        - postal_code
+        - phone
+        - last_update
+        - location
+    - category
+        - category_id
+        - name
+        - last_update
     - city
-    - country(object)
-    - last_update
-- country 
-    - country_id
-    - country
-    - last_update
-- customer
-    - customer_id
-    - store (object)
-    - first_name
-    - last_name
-    - email
-    - address (object)
-    - active
-    - create_date
-    - last_update
-    - user (objeto)(nose si sera)
-- film
-    - film_id
-    - title
-    - description
-    - release_year
-    - language (object)
-    - original_language (object)
-    - rental_duration
-    - rental_rate
-    - length
-    - rating
-    - special_features
-    - last_update
-- film_actor
-    - actor(object)
-    - film(object)
-    - last_update
-- film_category
-    - film(object)
-    - category(object)
-    - last_update
-- film_text
-    - film(object)
-    - title
-    - description
-- inventory
-    - inventory_id
-    - film(object)
-    - store(object)
-    - last_update
-- language
-    - language_id
-    - name
-    - last_update
-- payment
-    - payment_id
-    - customer(object)
-    - staff(object)
-    - rental(object)
-    - amount
-    - payment_date
-    - last_update
-- rental
-    - rental_id
-    - rental_date
-    - inventory(object)
-    - customer(object)
-    - return_date
-    - staff(object)
-    - last_update
-- staff
-    - staff_id
-    - first_name
-    - last_name
-    - address(object)
-    - picture(API)
-    - email
-    - store(object)
-    - active
-    - username
-    - password
-    - last_update
-- store
-    - store_id
-    - manager_staff (object)
-    - address (object)
-    - last_update
-------------------------------------------------------------------------------------
-- shopping_cart
-    - film(object)
-    - numberfilms
-    - TotalCost 
-    y en rental se colocaria al carrito
-- user (nose si sera)
-    - usuario
-    - contraseña
-
-
--Planificacion de endpoints 1
-    - store
-        - Mostrar || GET/store
+        - city_id
+        - city
+        - country(object)
+        - last_update
+    - country 
+        - country_id
+        - country
+        - last_update
+    - customer
+        - customer_id
+        - store (object)
+        - first_name
+        - last_name
+        - email
+        - address (object)
+        - active
+        - create_date
+        - last_update
+        - user (objeto)(nose si sera)
     - film
-        - Mostrar || GET/inventary/films
-        - Buscar u obtener peliculas que en el titulo contenga la palabra x || GET/inventary/film?name_film={x}
-        - Buscar u obtener peliculas que tengan al autor x || GET/inventary/film_actor?name_actor={x}
-
-    - costumer
-        - Obtener por id|| GET/customer/{id}
-        - Crear || POST/customer
-        - Editar || PUT/customer/{id}
+        - film_id
+        - title
+        - description
+        - release_year
+        - language (object)
+        - original_language (object)
+        - rental_duration
+        - rental_rate
+        - length
+        - rating
+        - special_features
+        - last_update
+    - film_actor
+        - actor(object)
+        - film(object)
+        - last_update
+    - film_category
+        - film(object)
+        - category(object)
+        - last_update
+    - film_text
+        - film(object)
+        - title
+        - description
+    - inventory
+        - inventory_id
+        - film(object)
+        - store(object)
+        - last_update
+    - language
+        - language_id
+        - name
+        - last_update
+    - payment
+        - payment_id
+        - customer(object)
+        - staff(object)
+        - rental(object)
+        - amount
+        - payment_date
+        - last_update
     - rental
-        - Crear || POST/rental
-
-    ----------------------------------
-    - shopping_carts
-        - Mostrar || GET/shopping_carts
-        - Editar || PUT/shopping_carts
-
+        - rental_id
+        - rental_date
+        - inventory(object)
+        - customer(object)
+        - return_date
+        - staff(object)
+        - last_update
+    - staff
+        - staff_id
+        - first_name
+        - last_name
+        - address(object)
+        - picture(API)
+        - email
+        - store(object)
+        - active
+        - username
+        - password
+        - last_update
+    - store
+        - store_id
+        - manager_staff (object)
+        - address (object)
+        - last_update
+    ------------------------------------------------------------------------------------
+    - shopping_cart
+        - film(object)
+        - numberfilms
+        - TotalCost 
+        y en rental se colocaria al carrito
+    - user (nose si sera)
+        - usuario
+        - contraseña
 ---------------------------------------------------------------------------------------
-- Planificacion de endpoints 2
+- Planificacion de endpoints
     - store
         - Mostrar || GET/store
     - film
-        - Mostrar || GET   /store/{id}/inventory/films
+        - Mostrar films de una store por id || GET   /store/{id}/inventory/films
         - Buscar u obtener peliculas que en el titulo contenga la palabra x || GET  /store/{id}/inventory/film?name_film={x}
         - Buscar u obtener peliculas que tengan al autor x || GET    /store/{id}/inventory/film_actor?name_actor={x}
-        
+
+        - Mostrar films de una store por country de store || GET   /store/{country}/inventory/films
+        - Buscar u obtener peliculas que en el titulo contenga la palabra x por country de store|| GET  /store/{country}/inventory/film?name_film={x}
+        - Buscar u obtener peliculas que tengan al autor x por country de store|| GET    /store/{country}/inventory/film_actor?name_actor={x}
+
+        - Buscar u obtener pelicula por genero x, por country de store|| GET /store/:country/inventory/film/category/{category}
+
+        - Buscar u obtener pelicula mas nuevas, por country de store|| GET /store/:country/inventory/film/new
     - costumer
         - Obtener por id|| GET   /store/{id}/customer/{id}
+
         - Crear || POST     /store/{id}/customer
         - Editar || PUT     /store/{id}/customer/{id}
     - rental
         - Crear || POST      /store/{id}/rental
+
+    - city/countrys
+
+        - Obtener las citys de una country || GET  /store/{country}/
 
     ----------------------------------
     - shopping_carts
