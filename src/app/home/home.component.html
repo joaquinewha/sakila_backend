@@ -1,0 +1,8 @@
+<div id="contenedor">
+    <p id="titulo">Bienvenido a Sakila Rental</p>
+    <p id="subtitulo">Seleccione uno de los paises donde tenemos servicio</p>
+    <div id="grid">        
+        <app-store [routerLink]="['/', 'store', store ?.country, 'inventory']" [data]="store"
+        *ngFor ="let store of stores"></app-store>
+    </div>
+</div>

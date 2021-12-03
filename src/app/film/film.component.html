@@ -1,0 +1,7 @@
+<div id="contenedorT">
+    <img src="image" [src]="image" >
+    <p id="texto">{{data ?.title}}</p>
+    <p id="texto">Costo de renta: {{data ?.rental_rate}}</p>
+    <button (click)="MandarData()" *ngIf='aux === 0'>Añadir a Carrito</button>
+    <p id="texto" *ngIf='aux === 1'>Pelicula añadida al carrito</p>
+</div>

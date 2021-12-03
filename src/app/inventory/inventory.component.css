@@ -1,0 +1,38 @@
+#titulo{
+    font-size: 30px;
+	font-weight: 800;
+    color: #cd9a03;
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+#subtitulo{
+    font-size: 23px;
+    color: #e1c888;
+	font-weight: 500;
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+    margin-left: 30px;
+}
+#texto{
+    font-size: 20px;
+    color: #cd9a03;
+	font-weight: 400;
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+    margin: 10px;
+
+    margin-left: 20px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+#navbar{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#contenedor{
+    background-color: #213242;
+}

@@ -1,0 +1,26 @@
+#contenedor{
+    text-align: center;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+}
+
+#texto{
+    font-size: 15px;
+    color: #cd9a03;
+	font-weight: 400;
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+    margin: 5px;
+}
+
+#contenedorT{
+    width: 50%;
+    background-color: azure;
+    margin: auto;
+}
+#imagen{
+    margin-right: 0px;
+}
+#boton{
+    margin: auto
+}

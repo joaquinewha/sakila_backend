@@ -1,0 +1,41 @@
+<div id="contenedor">
+    <div id="navbar">
+        <p id="subtitulo">Sakila Rental</p>
+        <p id="subtitulo"></p>
+        <select [(ngModel)]="selected">
+            <option *ngFor="let option of options" [value]="option.value">{{option.Option}}</option>
+        </select>
+        <form [formGroup]="formulario" (submit)="Busqueda()">
+            <input type="text" id="controls"  placeholder="Buscar" formControlName="busqueda">
+            <button [disabled]="formulario.invalid" id="boton">Buscar</button>
+        </form>
+        <button (click)="MandarDataCarrito()"  >Carrito({{this.carrito.length}})</button>
+        <a href="http://localhost:4200/store/{{aux}}/login" id="subtitulo">Ingresar</a>
+        <a href="http://localhost:4200/store/{{aux}}/customer" id="subtitulo">Crear Cuenta</a>
+        
+    </div>
+    
+    <p id="titulo">Alquila tu pelicula favorita</p>
+    <p id="subtitulo" *ngIf='aux === "normal"'>Algunas Peliculas</p>
+    <p id="subtitulo" *ngIf='aux === "busqueda"'>Resultados de la Busqueda</p>
+    <p id="subtitulo" *ngIf='films.length == 0'>No Se han encontrados resultados de la busqueda, pero aqui hay algunos generos que te pueden gustar</p>
+    <div id="grid">        
+        <app-film [data]="film"
+        *ngFor ="let film of films"></app-film>
+    </div>
+    <p id="subtitulo">Estrenos mas recientes</p>
+    <div id="grid">        
+        <app-film [data]="film"
+        *ngFor ="let film of NewFilms"></app-film>
+    </div>
+    <p id="subtitulo">Horror</p>
+    <div id="grid">        
+        <app-film [data]="film"
+        *ngFor ="let film of HorrorFilms"></app-film>
+    </div>
+    <p id="subtitulo">Sci-Fi</p>
+    <div id="grid">        
+        <app-film [data]="film"
+        *ngFor ="let film of Sci_FiFilms"></app-film>
+    </div>
+</div>

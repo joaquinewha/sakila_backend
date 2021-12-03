@@ -1,0 +1,39 @@
+<div id="contenedor" >
+    <p id="titulo">USER REGISTER</p>
+    <p id="subtitulo">Customer</p>
+    <hr>
+    <form [formGroup]="formulario" (submit)="CrearCliente()">
+        <p id="texto">Firs Name</p>
+        <input type="text"id="controls"  placeholder="Firs Name" value="" formControlName="first_name">
+        <p id="texto">Last Name</p>
+        <input type="text"id="controls"  placeholder="Last Name" value="" formControlName="last_name">
+        <p id="texto">Email</p>
+        <input type="text"id="controls"  placeholder="Email (example@gmail.com)" value="" formControlName="email">
+        <p id="subtitulo">Address</p>
+        <hr>
+        <p id="texto">City</p>
+        <br>
+        <select [(ngModel)]="selected" id="controlsO" formControlName="city_id">
+            <option *ngFor="let city of citys" [value]="city.city_id">{{city.city}}</option>
+        </select>
+        <br>
+        <p id="texto">Address</p>
+        <input type="text"id="controls"  placeholder="Adress" value="" formControlName="adress">
+        <p id="texto">Adress 2 (optional)</p>
+        <input type="text"id="controls"  placeholder="Secondary Adress (optional)" value="" formControlName="adress2">
+        <p id="texto">District</p>
+        <input type="text"id="controls"  placeholder="District" value="" formControlName="district">
+        <p id="texto">Postal Code</p>
+        <input type="text"id="controls"  placeholder="Postal Code (XXXXX or XXXX)" value="" formControlName="postal_code">
+        <p id="texto">Phone</p>
+        <input type="text"id="controls"  placeholder="Phone" value="" formControlName="phone">
+        <br>
+        <div id="grid">
+            
+            <button id="" [disabled]="formulario.invalid">Save</button>
+            <button id="boton" [routerLink]="['/']">Cancelar</button>
+        </div>
+    </form>
+
+    <hr>
+</div>

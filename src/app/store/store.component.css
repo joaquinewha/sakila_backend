@@ -1,0 +1,16 @@
+#contenedorT{
+    text-align: center;
+    width: 255px;
+    height: 350px;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#texto{
+    font-size: 25px;
+    color: #cd9a03;
+	font-weight: 400;
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+    margin: 10px;
+}

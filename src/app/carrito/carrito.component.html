@@ -1,0 +1,17 @@
+<div id="contenedor">
+    <div id="navbar">
+        <p id="subtitulo">Sakila Rental</p>
+        <p id="subtitulo"></p>
+        <a href="http://localhost:4200/store/{{aux}}/login" id="subtitulo">Ingresar</a>
+        <a href="http://localhost:4200/store/{{aux}}/customer" id="subtitulo">Crear Cuenta</a>
+    </div>
+    <p id="subtitulo">Se han agregado al carrito las siguientes peliculas</p>
+<app-film-carrito [data]="film"
+*ngFor ="let film of filmscarrito">
+</app-film-carrito>
+<hr>
+<p id="texto">TOTAL: {{total}}</p>
+<p id="texto">DESCUENTO: </p>
+<hr>
+<p id="texto">IMPORTE FINAL: </p>
+<button>Pagar</button>

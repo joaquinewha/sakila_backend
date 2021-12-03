@@ -1,0 +1,33 @@
+#titulo{
+    font-size: 30px;
+	font-weight: 800;
+    color: #cd9a03;
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+    margin: auto;
+    padding-top: 30px;
+}
+#subtitulo{
+    font-size: 20px;
+    color: #e1c888;
+	font-weight: 400;
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+    padding-top: 30px;
+}
+#texto{
+    font-size: 20px;
+    color: #cd9a03;
+	font-weight: 400;
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+    margin: 10px;
+    margin-left: 20px;
+}
+#grid{
+    padding-top: 75px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#contenedor{
+    text-align: center;
+    background-color: #213242;
+}
